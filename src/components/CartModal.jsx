@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import Cart from './Cart';
 
 const CartModal = forwardRef(function Modal(
-  { cartItems, onUpdateCartItemQuantity, title, actions },
+  { title, actions },
   ref
 ) {
   const dialog = useRef();
