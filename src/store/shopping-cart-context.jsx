@@ -1,4 +1,4 @@
-import { createContext, useReducer, useState } from 'react';
+import { createContext, useReducer } from 'react';
 import { DUMMY_PRODUCTS } from '../dummy-products.js';
 
 export const CartContext = createContext({
@@ -70,10 +70,6 @@ export default function CartContextProvider({ children }) {
     shoppingCartReducer,
     { items: [] }
   );
-
-  const [shoppingCart, setShoppingCart] = useState({
-    items: [],
-  });
 
   function handleAddItemToCart(id) {
     shoppingCartDispatch({
